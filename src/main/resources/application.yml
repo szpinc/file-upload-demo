@@ -1,0 +1,32 @@
+spring:
+  redis:
+    host: 172.16.8.37
+    port: 6379
+    password: hyzs
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 20
+        min-idle: 10
+  freemarker:
+    request-context-attribute: request
+    suffix: .html
+  servlet:
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 100MB
+
+upload:
+  chunkSize: 2 #单位为M
+  thread:
+    maxSize: 25
+  queue:
+    maxSize: 100
+  root:
+    dir: /file/uploads
+  window: #window系统指定盘符
+    root: D:/
+
+logging:
+  level:
+    me.szp: debug
